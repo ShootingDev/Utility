@@ -15,8 +15,6 @@ namespace Utility
                 {
                     long lifeTime = clsProcess.StartTime.Ticks;
 
-                    Console.WriteLine(DateTime.Now.Ticks - TimeSpan.FromTicks(lifeTime).TotalMinutes);
-
                     if (TimeSpan.FromTicks(DateTime.Now.Ticks - lifeTime).TotalMinutes >= comparer)
                     {
                         clsProcess.Kill();
